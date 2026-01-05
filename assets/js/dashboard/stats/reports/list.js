@@ -238,7 +238,7 @@ export default function ListReport({ keyLabel, metrics, colMinWidth = COL_MIN_WI
               {maybeRenderIconFor(listItem)}
 
               <span className="w-full md:truncate">
-                {trimURL(listItem.name, colMinWidth)}
+                {trimURL(listItem.name || listItem.event, colMinWidth)}
               </span>
             </FilterLink>
             <ExternalLink item={listItem} externalLinkDest={externalLinkDest} />
