@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view:*)",
+      "Bash(tree:*)",
+      "Bash(done)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
