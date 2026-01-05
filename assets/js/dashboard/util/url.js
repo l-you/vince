@@ -39,7 +39,7 @@ export function trimURL(url, maxLength) {
     const parts = restURL.split('/');
 
     const host = parts.shift();
-    if (host.length > maxLength - 5) {
+    if (host && host.length > maxLength - 5) {
       return `${protocol}://${host.substr(0, maxLength - 5)}${ellipsis}${restURL.slice(-maxLength + 5)}`;
     }
 
