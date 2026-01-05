@@ -46,7 +46,7 @@ nfpms:
       - vince 
     formats:
       - deb
-    maintainer: Geofrey Ernest
+    maintainer: l-you
     description: Vince - self hosted alternative to google analytics
     license: AGPL 3.0
 checksum:
@@ -95,7 +95,7 @@ dockers:
     ids:
       - vince
     image_templates:
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-amd64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-amd64"
     goos: linux
     goarch: amd64
     dockerfile: "vince.Dockerfile"
@@ -110,7 +110,7 @@ dockers:
     ids:
       - vince
     image_templates:
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-arm64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-arm64"
     goos: linux
     goarch: arm64
     dockerfile: "vince.Dockerfile"
@@ -123,31 +123,26 @@ dockers:
       - "--platform=linux/arm64"
 docker_manifests:
   - id: vince
-    name_template: "ghcr.io/vinceanalytics/vince:{{.Tag}}"
+    name_template: "ghcr.io/l-you/vince:{{.Tag}}"
     image_templates:
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-amd64"
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-arm64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-amd64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-arm64"
   - id: vince-latest
-    name_template: "ghcr.io/vinceanalytics/vince:latest"
+    name_template: "ghcr.io/l-you/vince:latest"
     image_templates:
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-amd64"
-      - "ghcr.io/vinceanalytics/vince:{{.Tag}}-arm64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-amd64"
+      - "ghcr.io/l-you/vince:{{.Tag}}-arm64"
 release:
   github:
-    owner: vinceanalytics
+    owner: l-you
     name: vince
   header: |
     **vince** is a self hosted alternative to google analytics.
-    
-    *To install*
-    **macos and linux**
-    ```
-    curl -fsSL https://vinceanalytics.com/install.sh | bash
-    ```
 
+    *To install*
     **Docker**
     ```
-    docker pull ghcr.io/vinceanalytics/vince
+    docker pull ghcr.io/l-you/vince
     ```
 
   extra_files:
